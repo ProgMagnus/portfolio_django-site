@@ -32,18 +32,10 @@
       </button>
       <div class="collapse navbar-collapse text-center" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="{% static 'portfolio/resume.pdf' %}">Resume</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/ProgMagnus" target="_blank">GitHub</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://twitter.com/teamofpandas" target="_blank">Twitter</a>
-          </li>
-          <li>
-            <a role="button" href="{% url 'blog:all_blogs' %}" class="btn btn-primary">Blog</a>
-          </li>
+            <a button type="button" href="{% static 'portfolio/resume.pdf' %}" class="btn btn-outline-primary mr-2">Resume</button>
+            <a button type="button" href="https://github.com/ProgMagnus" target="_blank" class="btn btn-outline-primary mr-2">GitHub</button>
+            <a button type="button" href="https://twitter.com/teamofpandas" target="_blank" class="btn btn-outline-primary mr-2">Twitter</button>
+           <a button type="button" href="{% url 'blog:all_blogs' %}" class="btn btn-outline-primary">Blog</a></button>
         </ul>
       </div>
     </div>
