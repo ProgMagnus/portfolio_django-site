@@ -4,17 +4,22 @@
 
 <div class="container text-center"> 
 	<h1 id="blogtitle" class="font-weight-bold text-center">Cat's Blog</hi>
+	<h3 class="text-center mb-5">Cat has written {{ blogs.count }} blog{{ blogs.count|pluralize }}</h3>	
+</div>
 
-	<h3 class="text-center mb-5">Cat has written {{ blogs.count }} blog{{ blogs.count|pluralize }}</h3>
 
-	{% for blog in blogs %}
-	<div class="row justify-content-center my-3">
-		<div class="col-md-10">
-	<a href="{% url 'blog:detail' blog.id %}">
-      <h2>{{ blog.title }}</h2>
-    </a>
+{% for blog in blogs %}
+<div class="card text-center">
+  <div class="card-header">
+    
+  </div>
+  <div class="card-body">
+      <h2>{{ blog.title }}</h2></h5>
+    <p class="card-text"><h4>{{ blog.description|striptags|truncatechars:100 }}</h4></p>
+    <a href="{% url 'blog:detail' blog.id %}" class="btn btn-primary">Read more</a>
+  </div>
+  <div class="card-footer text-muted">
     <h5 class="text-muted">{{ blog.date|date:'M d Y'|upper }}</h5>
-    <h4>{{ blog.description|striptags|truncatechars:100 }}</h4>
   </div>
 </div>
 {% endfor %}
