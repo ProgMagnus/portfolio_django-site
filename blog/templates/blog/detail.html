@@ -2,10 +2,17 @@
 {% load static %}
 {% block content %}
 
-<h1 class="text-center mt-5" id="blogdetailtitle">{{ blog.title }}</h1>
-
-<h5 class="text-center text-muted mb-5">{{ blog.date|date:'F jS Y' }}</h5>
-
-{{ blog.description|safe }}
+<div class="card text-center">
+  <div class="card-header">
+    
+  </div>
+  <div class="card-body">
+      <h2>{{ blog.title }}</h2></h5>
+    <p class="card-text"><h4>{{ blog.description|safe }}</h4></p>
+  </div>
+  <div class="card-footer text-muted">
+    <h5 class="text-muted">{{ blog.date|date:'F jS Y' }}</h5>
+  </div>
+</div>
 
 {% endblock %}
